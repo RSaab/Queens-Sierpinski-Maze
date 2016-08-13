@@ -9,11 +9,11 @@ Program 3: Maze
 Solving a maze involves a great deal of trial and error: following a path, backtracking when you cannot go farther, and trying other untried options. More specifically, you follow a path until it either gets you to a solution or it becomes a dead end. If you reach a dead end, you backtrack (go back) to a point in the maze where there is an unexplored path, which you follow. You keep doing this until you find a solution or have explored all possible paths, in which case you conclude that there is no solution. 
 
 Initial state
-\*\*S\*\*\*\*
-\*\*  \*E\*
-\*  \*\* \*
-\*\* \*\* \*
-\*\*    \*
+\*\*S\*\*\*\*\n
+\*\*  \*E\*\n
+\*  \*\* \*\n
+\*\* \*\* \*\n
+\*\*    \*\n
 
 Intermediary state
 **S****
