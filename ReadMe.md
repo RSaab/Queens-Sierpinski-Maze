@@ -8,33 +8,9 @@ The Sierpinski triangle is a fractal that is defined as follows: The constructio
 Program 3: Maze
 Solving a maze involves a great deal of trial and error: following a path, backtracking when you cannot go farther, and trying other untried options. More specifically, you follow a path until it either gets you to a solution or it becomes a dead end. If you reach a dead end, you backtrack (go back) to a point in the maze where there is an unexplored path, which you follow. You keep doing this until you find a solution or have explored all possible paths, in which case you conclude that there is no solution. 
 
-Initial state
-\*\*S\*\*\*\*\n
-\*\*  \*E\*\n
-\*  \*\* \*\n
-\*\* \*\* \*\n
-\*\*    \*\n
-
-Intermediary state
-**S****
-**..*E*
-* .** *
-** ** *
-**    *
-
-Final result
-**S****
-**..*E*
-* .**.*
-**.**.*
-** ...*
-
-
 Features: 
 	a.	Allow the user to create the maze. This is achieved by loading the maze from an existing file. Keep in mind that a “*” indicates a 		blocked path and a white space character indicates a clear path. As the maze is solved, the white space characters will be changed 		to dots (periods) to indicate attempted paths and ultimately a successful path through the maze if one exists. 
 	
 	b.	Randomly generate a maze to be searched if the user decides not to provide a maze of her/his own. This is a nice feature since it is 	 a little painful to create the mazes by hand, but it tends to produce a lot of unsolvable mazes. 
 	
 	c.	Update the maze as each step is taken (instead of just showing the completed maze at the end).
-
-The following discussion gives you feel for how to approach the problem. The only valid moves through the maze are in the four primary directions: down, right, up, and left. No diagonal moves are allowed. The maze can be traversed successfully if it can be traversed successfully from entry point (the grid entry “S”). To successfully traverse the maze from S, we must successfully traverse it from an adjacent position. At any point, some of the adjacent positions may be invalid, may be blocked, or may represent a possible successful path. Continue this process until the exit point (the grid entry “E”) is reached, in which case you conclude that the maze has been traversed successfully.
